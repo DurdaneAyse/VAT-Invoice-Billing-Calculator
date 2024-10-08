@@ -38,7 +38,6 @@
     background-color: #D9D9D9;
   }
   
-  /* Sarı tablo için stil */
   .yellow-table {
     background-color: yellow;
     border: 1px solid #ddd;
@@ -47,7 +46,7 @@
   }
   
   .yellow-table th, .yellow-table td {
-    border: 0px solid #ddd; /* Sarı tablo hücreleri için sınır */
+    border: 0px solid #ddd;
     background-color: yellow;
 
   }
