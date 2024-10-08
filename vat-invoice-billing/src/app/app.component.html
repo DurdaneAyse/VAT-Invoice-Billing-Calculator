@@ -1,0 +1,88 @@
+<div class="table-container">
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Our Invoice</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="highlight">
+          <td>Value</td>
+          <td><input 
+            type="number" 
+            id="valueInput" 
+            [(ngModel)]="userValue" 
+            name="value" 
+          /></td>  
+        </tr>
+
+        <tr>
+          <td>TL Levy (1%)</td>
+          <td>{{ tlLevy() }}</td>
+        </tr>
+
+        <tr>
+          <td>Get Fund Levy - 2.5%</td>
+          <td>{{ getFund() }}</td>
+        </tr>
+
+        <tr>
+          <td>Covid Levy - 1%</td>
+          <td>{{ covidLevy() }}</td>
+        </tr>
+
+        <tr>
+          <td>NHIL (2.5%)</td>
+          <td>{{ NHIL() }}</td>
+        </tr>
+
+        <tr class="highlight">
+          <td>Value Before VAT</td>
+          <td>{{ valueBefore() }}</td>  
+        </tr>
+
+        <tr>
+          <td>VAT 15%</td>
+          <td>{{ calculateVAT() }}</td>
+        </tr>
+
+        <tr class="highlight" style="height: 90px;">
+          <td>All Taxes Inclusive</td>
+          <td>{{ allTaxes() }}</td>  
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Sarı Renkli Tablo -->
+    <div>
+      <table  class="yellow-table">
+        <thead>
+          <tr>
+            <th>Converting an Amount from Inclusive to Exclusive</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr >
+            <td>Sales amount - Inclusive of all taxes and VAT</td>
+            <td><input 
+              type="number" 
+              id="valueInput" 
+              [(ngModel)]="userValueVAT" 
+              name="value" 
+            /></td>  
+          </tr>
+  
+          <tr  style="height: 90px;">
+            <td>Sales amount - Exclusive of all taxes and VAT</td>
+            <td>{{ exclusiveInclusive() }}</td>  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
